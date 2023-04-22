@@ -1,13 +1,12 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 from django.http import JsonResponse
 from .solver import empty_cell, solve
 from .apps import boards
 import random
 import copy
-from django.utils import timezone
 from django.contrib.auth.decorators import login_required
-from .models import Score
-from django.db.models import F
+
+
 # Create your views here.
 
 @login_required
@@ -68,19 +67,19 @@ def get_steps(response):
     else:
         return JsonResponse({})
     
-@login_required
-def index(request):
-    scores= Score.objects.order_by('time')[:10]
+# @login_required
+# def index(request):
+#     scores= Score.objects.order_by('time')[:10]
 
-    return render(request, 'sudoku/leaderboard.html',{
-        'scores': scores
-    })
+#     return render(request, 'sudoku/leaderboard.html',{
+#         'scores': scores
+#     })
 
-@login_required
-def submit(request):
-    if request.method=='POST':
-        name=request.POST.get('name')
-        time = float(request.POST.get('time'))
-        score=Score(name=name, time=time, date=timezone.now())
-        score.save()
-        return redirect('index')
+# @login_required
+# def submit(request):
+#     if request.method=='POST':
+#         name=request.POST.get('name')
+#         time = float(request.POST.get('time'))
+#         scores=Score(name=name, time=time, date=timezone.now())
+#         scores.save()
+#         return redirect('index')
