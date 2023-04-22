@@ -1,0 +1,11 @@
+<br>
+<div class="alert alert-success" role="alert">
+    <h2 style="text-align:center;">Login</h2>
+</div>
+<form method="post" >
+    {%csrf_token%}
+    {{form.as_p}}
+    <button type="Submit">Login</button>
+    <br>
+    <a href="{% url 'register' %}"><h4>Don't have account? Sign Up</h4></a>
+</form>
