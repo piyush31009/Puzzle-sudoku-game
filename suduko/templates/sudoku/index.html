@@ -143,9 +143,9 @@
     location.href = "{% url 'home' %}";
   });
 
-  $(document).on("click", "#leaderboard", function () {
-    location.href = "{% url 'leaderboard' %}";
-  });
+   $(document).on("click", "#sudoku", function () {
+    location.href = "{% url 'home' %}";
+  }); 
   
   $(document).on("click", "#solve", function () {
     
@@ -212,7 +212,7 @@
         
       },
       error: function(){
-        alert("Something went wrong! :(")
+        alert("Something went wrong! ")
       }
     });
   });
@@ -256,7 +256,7 @@
         }
       },
       error: function(){
-        alert("Something went wrong! :(")
+        alert("Something went wrong!")
       }
     });
   });

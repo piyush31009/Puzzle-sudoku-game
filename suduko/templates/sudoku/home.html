@@ -12,11 +12,6 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <link
-      rel="shortcut icon"
-      type="image/png"
-      href="{% static 'favicon.png' %}"
-    />
 
     <link
       rel="stylesheet"
@@ -33,16 +28,40 @@
     />
   </head>
   <body>
-    <div class="flex-container">
-      <div class="item">
-        <header><h1 class="head">Sudoku Game and Solver</h1></header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" id="sudoku">Sudoku Game and Solver</a>
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'home'%}">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" id="new-board">New Board</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="solve">Solve</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="stopgame">Stopgame</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="d-flex">
+          <a class="d-flex px-2">{{user.username}}</a>
+          <a class="d-flex" href="{% url 'logout' %}">LogOut</a>
+        </div>
       </div>
+    </nav>
+
+    <div class="flex-container">
       <div class="item">
         <h2 id="msg">Solve the Sudoku or press Solve so I can solve it</h2>
       </div>
-      <div class="item speed">
-      </div>
-      
+      <div class="item speed"></div>
 
       <div class="item items">
         <table class="main-board">
@@ -87,13 +106,14 @@
         </div>
       </div>
       <div class="item other">
-        <button id="new-board">New Board</button>
-        <button id="solve">Solve</button>
+        <button id="new-board" class="m1">New Board</button>
+        <button id="solve" class="m1">Solve</button>
+        <button id="stopgame" class="m1">Stopgame</button>
+
         <button id="pause">Pause</button>
-        <button id="stopgame">Stop Game</button>
-        <button id="leaderboard">Leaderboard</button>
+
+        {% comment %} <button id="leaderboard">Leaderboard</button> {%endcomment %}
       </div>
-    
     </div>
   </body>
   {% block javascript %} {% endblock %}
