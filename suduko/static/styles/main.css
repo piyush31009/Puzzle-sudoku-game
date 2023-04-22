@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka&family=Poppins&display=swap");
+
+:root{
+    --success: blue;
+    --invalid: orange;
+    --empty: white;
+    --current: purple;
+}
+
+.flex-container {
+    width: 120vw;
+    height: 90vh;
+    max-width: 100%;
+    margin: 30px;
+    padding-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+}
+
+h1{
+    padding-bottom: 25px;
+}
+
+.make-red{
+    background-color: var(--invalid) !important;
+    color: whitesmoke;
+}
+
+.blur{
+    filter: blur(5px);
+}
+
+.no-edit{
+    text-align: center;
+    font-size: 37px;
+}
+
+.fa-solid, .fas{
+    font-size: 24px;
+}
+
+.current-speedbtn {
+    box-shadow: 0px 8px 15px rgba(0,0,0,0.2);
+    background-color: white !important;
+    transition: all 0.1s ease 0s;
+}
+
+.speed button{
+    width: auto;
+    overflow: visible;
+    text-align: center;
+    min-width: 70px;
+    height: 35px;
+    font-size: 11px;
+    text-transform: uppercase;
+    margin: 2px;
+    background-color: whitesmoke;
+    border-color: white;
+    border: none;
+    border-radius: 40px;
+    outline: none;
+}
+
+.speed p{
+    font-size: 16px;
+    margin-right: 4px;
+    margin-top: 10px;
+
+}
+
+[class$="x2"], [class$="x5"], [class$="x8"] {
+    padding-right: 8px;
+}
+
+[class^="2x"], [class^="5x"], [class^="8x"] {
+    padding-bottom: 10px;
+}
+
+.cell{
+    border: 3px solid black;
+}
+
+.no-cursor{
+    cursor: not-allowed;
+}
+
+.solved-cell{
+    background-color: var(--success);
+    color: white;
+}
+
+.current-cell{
+    background-color: var(--current);
+    color: #ffffff;
+    
+}
+
+.empty-cell{
+    background-color: var(--empty);
+    border:4px solid black;
+    color: black;
+}
+
+.wrong-cell{
+    background-color: var(--invalid);
+    border-radius: 4px;
+    color: #ffffff;
+}
+
+.main-board input{
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 2px;
+    margin: 4px;
+    border-radius: 7px;
+}
+
+.timer-steps{
+    width: auto;
+    text-align: start;
+    align-items: center;
+    min-width: 100px;
+    height: 35px;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+.timer , .steps{
+    display: flex;
+    margin: 67px;
+    padding: 2px;
+    flex-direction: row;
+    text-align: start;
+    min-width: 100px;
+    height: 35px;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: space-between;
+}
+
+.items{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    margin: 8px;
+    padding: 0;
+    border: 2px solid black;
+    border-radius: 7px;
+}
+
+.item{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    margin: 8px;
+    padding: 0;
+}
+
+.other button{
+    border: 2px solid black;
+    background-color: #ffffff;
+    border-color: black;
+    border-radius: 4px;
+    margin: 0px 3px 0px;
+}
+
+.other{
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+}
+
+.other button:hover {
+    background-color: var(--success);
+    color: #ffffff;
+}
+
+@media screen and (max-width: 400px){
+    .main-board input{
+        width: 25px;
+        height: 25px;
+        font-size: 18px;
+    }
+}
