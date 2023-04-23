@@ -60,5 +60,3 @@ Note: Before going to the steps of setup, Make sure that the operating system mu
 ![DashBoaard - Vivaldi 2023-04-23 14-29-34 (5)](https://user-images.githubusercontent.com/85010286/233832577-79259016-8507-4ebe-95d6-2152697cbb8d.gif)
 ![DashBoaard - Vivaldi 2023-04-23 14-29-34 (6)](https://user-images.githubusercontent.com/85010286/233832660-d66a829f-0cbf-4c05-96bc-0ce52f27b5d3.gif)
 
-# Website link:
-For viewing the web application kindly clone and run with the help of steps to setup the project.
