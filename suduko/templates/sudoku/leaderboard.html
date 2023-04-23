@@ -9,14 +9,12 @@
             </tr>
         </thead>
         <tbody>
-            {% for entry in scores %}
+            {% for entry in entries %}
                 <tr>
                     <td>{{forloop.counter}}</td>
-                    <td>{{entry.name}}</td>
-                    <td>{{entry.time}} seconds</td>
+                    <td>{{entry.user.username}}</td>
+                    <td>{{entry.time}}</td>
                 </tr>
             {% endfor %}
         </tbody>
     </table>
-
-
